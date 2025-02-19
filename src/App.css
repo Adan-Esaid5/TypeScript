@@ -1,0 +1,246 @@
+/* 🎨 עיצוב כללי עם סגנון AI */
+body {
+  background: linear-gradient(135deg, #1c1c3c, #24244e);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: -30;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 🔹 עטיפת האפליקציה */
+.app-container {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 📝 תיבת הוספת משימה */
+.task-input {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.task-input input,
+.task-input textarea {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.task-input input::placeholder,
+.task-input textarea::placeholder {
+  color: #bbb;
+}
+
+.task-input input:focus,
+.task-input textarea:focus {
+  border: 2px solid #00c9ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 201, 255, 0.7);
+}
+
+.task-input button {
+  background: linear-gradient(135deg, #00c9ff, #0061ff);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 201, 255, 0.5);
+}
+
+.task-input button:hover {
+  background: linear-gradient(135deg, #0061ff, #00c9ff);
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0, 201, 255, 0.7);
+}
+
+/* 📋 טבלה להצגת משימות */
+.task-table {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.task-table th,
+.task-table td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  text-align: center;
+  color: white;
+}
+
+.task-table th {
+  background: linear-gradient(135deg, #00c9ff, #0061ff);
+}
+
+.task-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.task-table .completed {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+
+/* 🎭 עיצוב דמויות מה-API */
+.cartoon-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cartoon-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+}
+
+.cartoon-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.cartoon-item img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cartoon-item h3 {
+  font-size: 1.4rem;
+  color: #00c9ff;
+  margin-top: 10px;
+}
+
+/* 🔘 כפתורים */
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.completed-btn {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.completed-btn:hover {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.not-completed-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.not-completed-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ff5733, #c70039);
+  color: white;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #c70039, #ff5733);
+}
+
+/* 📌 כפתור ניווט להוספת משימה */
+.add-task-btn {
+  background: linear-gradient(135deg, #ff8c00, #ff5733);
+  margin-top: 20px;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-task-btn:hover {
+  background: linear-gradient(135deg, #ff5733, #ff8c00);
+  transform: scale(1.05);
+}
+
+/* 🔄 כפתורי סינון */
+.task-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-filters button {
+  background: linear-gradient(135deg, #0077b6, #005f8a);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.task-filters button.active {
+  background: linear-gradient(135deg, #ffa500, #ff8c00);
+}
+
+.task-filters button:hover {
+  background: linear-gradient(135deg, #005f8a, #0077b6);
+}
+
+/* 📱 התאמה לניידים */
+@media (max-width: 768px) {
+  .task-input input,
+  .task-input textarea {
+    width: 100%;
+  }
+
+  .task-table {
+    font-size: 0.9rem;
+  }
+
+  .task-filters {
+    flex-direction: column;
+  }
+
+  .task-filters button {
+    width: 90%;
+    margin: 5px auto;
+  }
+}
